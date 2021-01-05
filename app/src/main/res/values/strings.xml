@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">My Top 10 Songs</string>
+    <string name="nama_artis">Nama Artis</string>
+    <string name="judul_lagu">Judul Lagu</string>
+    <string name="charts">C H A R T S</string>
+    <string name="subtitle">MY TOP 10 SONGS</string>
+    <string name="featuring">Featuring</string>
+    <string name="album">Album</string>
+    <string name="track_info">TRACK INFO</string>
+    <string name="nama_featuring">Nama Featuring</string>
+    <string name="poducer">Poducer</string>
+    <string name="nama_album">Nama Album</string>
+    <string name="produced_by">Produced by</string>
+    <string name="release_date">Release Date</string>
+    <string name="tanggal">Tanggal</string>
+    <string name="my_info">MY INFO</string>
+    <string name="full_name">Full Name</string>
+    <string name="email">Email</string>
+    <string name="user_information">USER INFORMATION</string>
 </resources>
