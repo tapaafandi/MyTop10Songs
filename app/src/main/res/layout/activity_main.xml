@@ -7,16 +7,15 @@
     android:background="@color/colorPrimaryDark"
     tools:context=".MainActivity">
 
-
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/ivCircleProfileImage"
         android:layout_width="45dp"
         android:layout_height="45dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
-        android:src="@drawable/user_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@color/moreDark"/>
 
     <TextView
         android:id="@+id/textView"

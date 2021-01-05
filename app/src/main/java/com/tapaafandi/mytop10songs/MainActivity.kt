@@ -7,16 +7,21 @@ import android.widget.ImageView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.tapaafandi.mytop10songs.data.Songs
 import com.tapaafandi.mytop10songs.data.SongsData
+import com.tapaafandi.mytop10songs.data.Users
+import com.tapaafandi.mytop10songs.data.UsersData
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var rvSongs: RecyclerView
-    private var listSong: ArrayList<Songs> = arrayListOf()
+    private val listSong: ArrayList<Songs> = arrayListOf()
+    private val user = UsersData.user
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_MyTop10Songs)
         setContentView(R.layout.activity_main)
 
         rvSongs = findViewById(R.id.rvSongs)
@@ -24,10 +29,14 @@ class MainActivity : AppCompatActivity() {
 
         listSong.addAll(SongsData.listData)
         showRecyclerList()
+        setUserProfileImage()
 
         val ivUserProfile = findViewById<ImageView>(R.id.ivCircleProfileImage)
         ivUserProfile.setOnClickListener {
             Intent(this, UserProfileActivity::class.java).apply {
+                putExtra("EXTRA_NAME", user.name)
+                putExtra("EXTRA_EMAIL", user.email)
+                putExtra("EXTRA_USER_IMAGE", user.userImage)
                 startActivity(this)
             }
         }
@@ -53,7 +62,10 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    private fun showSelectedSong(song: Songs) {
-        Toast.makeText(this, song.name, Toast.LENGTH_SHORT).show()
+    private fun setUserProfileImage() {
+        val ivUserImage: ImageView = findViewById(R.id.ivCircleProfileImage)
+        Glide.with(this)
+            .load(user.userImage)
+            .into(ivUserImage)
     }
 }

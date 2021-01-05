@@ -13,6 +13,11 @@ class DetailSongActivity : AppCompatActivity() {
         setContentView(R.layout.activity_detail_song)
 
         showDataFromIntent()
+
+        val ivBack: ImageView = findViewById(R.id.ivBack)
+        ivBack.setOnClickListener {
+            finish()
+        }
     }
 
     private fun showDataFromIntent() {

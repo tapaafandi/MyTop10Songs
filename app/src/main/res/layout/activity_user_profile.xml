@@ -22,18 +22,17 @@
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:gravity="end"
+        android:orientation="vertical"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="@+id/ivBack">
 
         <TextView
             android:id="@+id/textView"
             style="@style/TextContent.Headline4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:text="MY PROFILE"/>
+            android:text="MY PROFILE" />
 
     </LinearLayout>
 
@@ -86,11 +85,12 @@
                     android:text="@string/full_name"/>
 
                 <TextView
+                    android:id="@+id/tvUserName"
                     style="@style/About.Accent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Mustafa Afandi"/>
+                    tools:text="User Full Name"/>
             </TableRow>
 
             <TableRow
@@ -106,12 +106,13 @@
                     android:text="@string/email"/>
 
                 <TextView
+                    android:id="@+id/tvUserEmail"
                     style="@style/About.Accent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textSize="14sp"
                     android:layout_weight="1"
-                    android:text="tapaafandi@gmail.com"/>
+                    tools:text="User Email"/>
             </TableRow>
 
         </TableLayout>
