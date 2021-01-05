@@ -21,11 +21,12 @@ class DetailSongActivity : AppCompatActivity() {
     }
 
     private fun showDataFromIntent() {
-        val tvSongTitle = findViewById<TextView>(R.id.tvSongTitle)
-        val tvArtistName = findViewById<TextView>(R.id.tvArtist)
-        val tvFeaturing = findViewById<TextView>(R.id.tvFeaturing)
-        val tvProduceBy = findViewById<TextView>(R.id.tvProduceBy)
-        val tvAlbum = findViewById<TextView>(R.id.tvSongAlbum)
+        val tvSongTitle: TextView = findViewById(R.id.tvSongTitle)
+        val tvArtistName: TextView = findViewById(R.id.tvArtist)
+        val tvFeaturing: TextView = findViewById(R.id.tvFeaturing)
+        val tvProduceBy: TextView = findViewById(R.id.tvProduceBy)
+        val tvAlbum: TextView = findViewById(R.id.tvSongAlbum)
+        val tvReleaseDate: TextView = findViewById(R.id.tvReleaseDate)
         val ivSong: ImageView = findViewById(R.id.ivSong)
 
         intent.apply {
@@ -34,6 +35,7 @@ class DetailSongActivity : AppCompatActivity() {
             tvFeaturing.text = getStringExtra("EXTRA_FEATURING")
             tvAlbum.text = getStringExtra("EXTRA_ALBUM")
             tvProduceBy.text = getStringExtra("EXTRA_PRODUCE_BY")
+            tvReleaseDate.text = getStringExtra("EXTRA_RELEASE_DATE")
             val songImage = getIntExtra("EXTRA_SONG_IMAGE", R.drawable.song_placeholder)
 
             Glide.with(this@DetailSongActivity)

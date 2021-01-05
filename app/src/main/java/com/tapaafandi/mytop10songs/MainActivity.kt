@@ -56,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                     putExtra("EXTRA_FEATURING", data.featruing)
                     putExtra("EXTRA_ALBUM", data.album)
                     putExtra("EXTRA_PRODUCE_BY", data.produceBy)
+                    putExtra("EXTRA_RELEASE_DATE", data.releaseDate)
                     startActivity(this)
                 }
             }

@@ -106,6 +106,7 @@ object SongsData {
                 song.album = songAlbum[position]
                 song.produceBy = songProduceBy[position]
                 song.songImage = songImages[position]
+                song.releaseDate = releaseDate[position]
                 list.add(song)
             }
             return list
