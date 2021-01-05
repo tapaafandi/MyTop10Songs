@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "My Top 10 Songs"
