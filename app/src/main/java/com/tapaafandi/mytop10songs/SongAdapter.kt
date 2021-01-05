@@ -11,7 +11,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.tapaafandi.mytop10songs.data.Songs
 
-class SongAdapter(private val songs: ArrayList<Songs>) : RecyclerView.Adapter<SongAdapter.ListViewHolder>() {
+class SongAdapter(private val songs: List<Songs>) : RecyclerView.Adapter<SongAdapter.ListViewHolder>() {
 
     private lateinit var onItemClickCallback: OnItemClickCallback
 

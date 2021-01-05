@@ -4,7 +4,7 @@ import com.tapaafandi.mytop10songs.R
 
 object SongsData {
 
-    private val artistName = arrayOf(
+    private val artistName = listOf(
         "Eminem",
         "Eminem",
         "Eminem",
@@ -17,7 +17,7 @@ object SongsData {
         "Roddy Rich"
     )
 
-    private val songTitle = arrayOf(
+    private val songTitle = listOf(
         "Gnat",
         "Godzilla (feat. Juice WRLD)",
         "Farewell",
@@ -30,7 +30,7 @@ object SongsData {
         "The Box"
     )
 
-    private val songFeaturing = arrayOf(
+    private val songFeaturing = listOf(
         "-",
         "Juice WRLD",
         "-",
@@ -43,7 +43,7 @@ object SongsData {
         "-"
     )
 
-    private val songProduceBy = arrayOf(
+    private val songProduceBy = listOf(
         "d.a. got that dope",
         "Eminem & d.a got that dope",
         "Ricky Racks & Eminem",
@@ -56,7 +56,7 @@ object SongsData {
         "Dat Boi Squeeze & 30 Roc"
     )
 
-    private val songAlbum = arrayOf(
+    private val songAlbum = listOf(
         "Music to Be Murdered By: Side B",
         "Music to Be Murdered By",
         "Music to Be Murdered By",
@@ -69,7 +69,7 @@ object SongsData {
         "Please Excuse Me for Being Antisocial"
     )
 
-    private val releaseDate = arrayOf(
+    private val releaseDate = listOf(
         "December 18, 2020",
         "January 17, 2020",
         "January 17, 2020",
@@ -82,7 +82,7 @@ object SongsData {
         "December 6, 2019",
     )
 
-    private val songImages = intArrayOf(
+    private val songImages = listOf(
         R.drawable.eminem2,
         R.drawable.eminem,
         R.drawable.eminem,
@@ -95,9 +95,9 @@ object SongsData {
         R.drawable.roddy_ricch
     )
 
-    val listData: ArrayList<Songs>
+    val listData: List<Songs>
         get() {
-            val list = arrayListOf<Songs>()
+            val list = mutableListOf<Songs>()
             for (position in artistName.indices) {
                 val song = Songs()
                 song.name = artistName[position]

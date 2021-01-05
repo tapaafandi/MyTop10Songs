@@ -16,7 +16,7 @@ import com.tapaafandi.mytop10songs.data.UsersData
 class MainActivity : AppCompatActivity() {
 
     private lateinit var rvSongs: RecyclerView
-    private val listSong: ArrayList<Songs> = arrayListOf()
+    private val listSong: MutableList<Songs> = mutableListOf()
     private val user = UsersData.user
 
     override fun onCreate(savedInstanceState: Bundle?) {
