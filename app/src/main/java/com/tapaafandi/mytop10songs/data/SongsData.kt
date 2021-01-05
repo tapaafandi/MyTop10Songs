@@ -69,6 +69,19 @@ object SongsData {
         "Please Excuse Me for Being Antisocial"
     )
 
+    private val releaseDate = arrayOf(
+        "December 18, 2020",
+        "January 17, 2020",
+        "January 17, 2020",
+        "May 3, 2019",
+        "May 23, 2019",
+        "September 28, 2018",
+        "September 28, 2018",
+        "July 26, 2019",
+        "July 26, 2019",
+        "December 6, 2019",
+    )
+
     private val songImages = intArrayOf(
         R.drawable.eminem2,
         R.drawable.eminem,

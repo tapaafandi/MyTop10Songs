@@ -23,7 +23,7 @@
             android:layout_height="65dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@android:color/darker_gray" />
+            tools:src="@drawable/song_placeholder" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,14 +37,14 @@
                 style="@style/TextContent.Headline6.Accent"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nama_artis"/>
+                tools:text="Song Title"/>
 
             <TextView
                 android:id="@+id/tvSongTitle"
                 style="@style/TextContent.Subtitle"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="@string/judul_lagu"/>
+                tools:text="Artist Name"/>
         </LinearLayout>
 
     </LinearLayout>

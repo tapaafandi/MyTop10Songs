@@ -5,12 +5,19 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
 import com.tapaafandi.mytop10songs.data.Songs
 
 class SongAdapter(private val songs: ArrayList<Songs>) : RecyclerView.Adapter<SongAdapter.ListViewHolder>() {
+
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var tvArtistName: TextView = itemView.findViewById(R.id.tvArtistName)
@@ -34,9 +41,17 @@ class SongAdapter(private val songs: ArrayList<Songs>) : RecyclerView.Adapter<So
         holder.tvArtistName.text = song.name
         holder.tvSongTitle.text = song.title
 
+        holder.itemView.setOnClickListener {
+            onItemClickCallback.onItemClicked(songs[holder.adapterPosition])
+        }
+
     }
 
     override fun getItemCount(): Int {
         return songs.size
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: Songs)
     }
 }

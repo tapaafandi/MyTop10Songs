@@ -8,7 +8,7 @@ object UsersData {
     private const val email: String = "tapaafandi@gmail.com"
     private const val image: Int = R.drawable.my_photo_profile
 
-    val listUser : Users
+    val user : Users
         get() {
             val user = Users()
             user.name = name
