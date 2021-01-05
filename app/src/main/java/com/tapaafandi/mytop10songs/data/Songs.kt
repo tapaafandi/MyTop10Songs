@@ -6,5 +6,5 @@ data class Songs(
     var featruing: String = "",
     var produceBy: String = "",
     var album: String = "",
-    var photo: Int = 0
+    var songImage: Int = 0
 )

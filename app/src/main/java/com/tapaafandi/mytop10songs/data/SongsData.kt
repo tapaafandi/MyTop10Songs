@@ -4,32 +4,34 @@ import com.tapaafandi.mytop10songs.R
 
 object SongsData {
 
-    private val artistName = arrayOf("Eminem",
+    private val artistName = arrayOf(
+        "Eminem",
+        "Eminem",
         "Eminem",
         "Logic",
         "Joyner Lucas",
         "Lil Wayne",
         "Lil Wayne",
-        "Kendrick Lamar",
         "NF",
         "Rich Brian",
         "Roddy Rich"
     )
 
     private val songTitle = arrayOf(
+        "Gnat",
         "Godzilla (feat. Juice WRLD)",
         "Farewell",
         "Homicide (feat. Eminem)",
         "Isis (feat. Logic)",
         "Mona Lisa (feat. Kendrick Lamar)",
         "Open Letter",
-        "Swimming Pools (Drank) - Extended Version",
         "I Miss The Days",
         "Drive Safe",
         "The Box"
     )
 
     private val songFeaturing = arrayOf(
+        "-",
         "Juice WRLD",
         "-",
         "Eminem",
@@ -38,44 +40,43 @@ object SongsData {
         "-",
         "-",
         "-",
-        "-",
         "-"
     )
 
     private val songProduceBy = arrayOf(
+        "d.a. got that dope",
         "Eminem & d.a got that dope",
         "Ricky Racks & Eminem",
         "SHROOM & BREGMA",
-        "Nox Beatz, Boi-1da & Rocktee - ADHD",
+        "Nox Beatz, Boi-1da & Rocktee",
         "ONHEL & Infamouse",
         "DJ Frank E, Johnny Yukon & Nick The Piff",
-        "T-Minus",
         "Tommee Profitt & NF",
         "The Donuts, Diamond Pistols",
         "Dat Boi Squeeze & 30 Roc"
     )
 
     private val songAlbum = arrayOf(
+        "Music to Be Murdered By: Side B",
         "Music to Be Murdered By",
         "Music to Be Murdered By",
         "Confessions of a Dangerous Mind",
         "ADHD",
         "The Carter V",
         "The Carter V",
-        "good kid, m.A.A.d city (Deluxe Version)",
         "The Search",
         "The Sailor",
         "Please Excuse Me for Being Antisocial"
     )
 
     private val songImages = intArrayOf(
+        R.drawable.eminem2,
         R.drawable.eminem,
         R.drawable.eminem,
         R.drawable.logic,
         R.drawable.joyner_lucas,
         R.drawable.lil_wayne,
         R.drawable.lil_wayne,
-        R.drawable.kendrick_lamar,
         R.drawable.nf,
         R.drawable.rich_brian,
         R.drawable.roddy_ricch
@@ -91,7 +92,7 @@ object SongsData {
                 song.featruing = songFeaturing[position]
                 song.album = songAlbum[position]
                 song.produceBy = songProduceBy[position]
-                song.photo = songImages[position]
+                song.songImage = songImages[position]
                 list.add(song)
             }
             return list
